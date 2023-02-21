@@ -59,3 +59,14 @@ function rainbowMode(e) {
   const randomB = Math.floor(Math.random() * 256)
   e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
 }
+
+function changeColor(e) {
+  if (e.type === 'mouseover' && !mouseDown) return;
+  if(currentMode === 'color') {
+    colorMode(e);
+  } else if(currentMode === 'rainbow') {
+    rainbowMode(e);
+  } else if(currentMode === 'eraser') {
+    eraserMode(e);
+  }
+}

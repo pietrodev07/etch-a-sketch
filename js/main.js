@@ -88,3 +88,11 @@ function createGrid(gridSize) {
 function clearGrid() {
   display.innerHTML = '';
 }
+
+function reloadGrid() {
+  let result = confirm("Are you sure?");
+  if(result === true) {
+    clearGrid();
+    createGrid(currentSize);
+  }
+}

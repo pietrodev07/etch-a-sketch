@@ -70,3 +70,17 @@ function changeColor(e) {
     eraserMode(e);
   }
 }
+
+function createGrid(gridSize) {
+
+  display.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`
+  display.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
+
+  for (let i = 0; i < gridSize * gridSize; i++) {
+    const square = document.createElement('div');
+    square.classList.add('square');
+    square.addEventListener('mouseover', changeColor);
+    square.addEventListener('mousedown', changeColor);
+    display.appendChild(square);
+  }
+}

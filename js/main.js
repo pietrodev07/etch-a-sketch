@@ -84,3 +84,7 @@ function createGrid(gridSize) {
     display.appendChild(square);
   }
 }
+
+function clearGrid() {
+  display.innerHTML = '';
+}

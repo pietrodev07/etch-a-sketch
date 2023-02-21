@@ -44,3 +44,7 @@ function setSize() {
 
   return currentSize;
 }
+
+function colorMode(e) {
+  e.target.style.backgroundColor = currentColor;
+}

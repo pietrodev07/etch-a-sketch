@@ -25,3 +25,7 @@ const sizeBtn = document.querySelector('#size-btn');
 function setColor(newColor) {
   currentColor = newColor;
 }
+
+function setMode(newMode) {
+  currentMode = newMode;
+}

@@ -131,3 +131,38 @@ main {
   color: #F2CC8F;
   font-size: 18px;
 }
+
+@media (max-width: 950px) {
+  main {
+    justify-content: space-around;
+  }
+
+  .display {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 790px) {
+
+  main {
+    justify-content: center;
+  }
+
+  .display {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 660px) {
+
+  main {
+    flex-direction: column;
+  }
+
+  .display {
+    width: 300px;
+    height: 300px;
+  }
+}

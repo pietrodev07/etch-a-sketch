@@ -96,3 +96,8 @@ function reloadGrid() {
     createGrid(currentSize);
   }
 }
+
+function changeGridSize() {
+  clearGrid();
+  createGrid(setSize());
+}

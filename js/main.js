@@ -101,3 +101,21 @@ function changeGridSize() {
   clearGrid();
   createGrid(setSize());
 }
+
+colorPicker.oninput = (e) => setColor(e.target.value);
+
+colorBtn.onclick = () => setMode('color')
+rainbowBtn.onclick = () => setMode('rainbow');
+eraserBtn.onclick = () => setMode('eraser');
+
+clearBtn.onclick = () => reloadGrid();
+
+sizeBtn.onclick = () => changeGridSize();
+
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
+window.onload = () => {
+  colorPicker.value = "252525";
+  createGrid(DEFAULT_SIZE);
+}

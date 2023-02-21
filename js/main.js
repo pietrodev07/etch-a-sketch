@@ -29,3 +29,18 @@ function setColor(newColor) {
 function setMode(newMode) {
   currentMode = newMode;
 }
+
+function setSize() {
+  currentSize = prompt("Insert your size: 1 to 64");
+
+  while (currentSize !== parseInt(currentSize, 10).toString()) {
+    alert("Please enter only numbers!");
+    currentSize = prompt("Enter size: 1 to 64");
+    while (Number(currentSize) < 1 || Number(currentSize) > 64) {
+      alert("Please enter a a number between 1 and 64!");
+      currentSize = prompt("Enter size: 1 to 64");
+    }
+  }
+
+  return currentSize;
+}

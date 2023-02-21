@@ -48,3 +48,7 @@ function setSize() {
 function colorMode(e) {
   e.target.style.backgroundColor = currentColor;
 }
+
+function eraserMode(e) {
+  e.target.style.backgroundColor = 'ghostwhite';
+}

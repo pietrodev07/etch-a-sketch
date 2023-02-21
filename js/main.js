@@ -21,3 +21,7 @@ const eraserBtn = document.querySelector('#eraser-btn');
 const clearBtn = document.querySelector('#clear-btn');
 
 const sizeBtn = document.querySelector('#size-btn');
+
+function setColor(newColor) {
+  currentColor = newColor;
+}

@@ -104,3 +104,30 @@ main {
   scale: 1.05;
   background-color: #81B29A;
 }
+
+.active-btn {
+  background-color: #E07A5F;
+  border: 1px solid #E07A5F;
+}
+
+.active-btn:hover {
+  background-color: #E07A5F;
+  border: 1px solid #E07A5F;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #F2CC8F;
+  font-size: 18px;
+}

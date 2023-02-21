@@ -14,3 +14,12 @@ body {
   background-color: #3D405B;
   color: white;
 }
+
+header {
+  background-color: #25283a;
+  color: #E07A5F;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,23 @@
+const DEFAULT_COLOR = '#252525';
+const DEFAULT_MODE = 'color';
+const DEFAULT_SIZE = 16;
+
+let currentColor = DEFAULT_COLOR;
+let currentMode = DEFAULT_MODE;
+let currentSize = DEFAULT_SIZE;
+
+let mouseDown = false;
+
+const display = document.querySelector('#display');
+
+const colorPicker = document.querySelector('#color-picker');
+
+const colorBtn = document.querySelector('#color-btn');
+
+const rainbowBtn = document.querySelector('#rainbow-btn');
+
+const eraserBtn = document.querySelector('#eraser-btn');
+
+const clearBtn = document.querySelector('#clear-btn');
+
+const sizeBtn = document.querySelector('#size-btn');

@@ -52,3 +52,10 @@ function colorMode(e) {
 function eraserMode(e) {
   e.target.style.backgroundColor = 'ghostwhite';
 }
+
+function rainbowMode(e) {
+  const randomR = Math.floor(Math.random() * 256)
+  const randomG = Math.floor(Math.random() * 256)
+  const randomB = Math.floor(Math.random() * 256)
+  e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+}

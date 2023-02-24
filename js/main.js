@@ -27,6 +27,7 @@ function setColor(newColor) {
 }
 
 function setMode(newMode) {
+  activateButton(newMode);
   currentMode = newMode;
 }
 
@@ -102,6 +103,34 @@ function changeGridSize() {
   createGrid(setSize());
 }
 
+function activateButton(newMode) {
+
+  switch (currentMode) {
+    case 'rainbow':
+      rainbowBtn.classList.remove('active');
+      break;
+    case 'color':
+      colorBtn.classList.remove('active');
+      break;
+    case 'eraser':
+      eraserBtn.classList.remove('active');
+      break;
+  }
+
+  switch (newMode) {
+    case 'rainbow':
+      rainbowBtn.classList.add('active');
+      break;
+    case 'color':
+      colorBtn.classList.add('active');
+      break;
+    case 'eraser':
+      eraserBtn.classList.add('active');
+      break;
+  }
+
+}
+
 colorPicker.oninput = (e) => setColor(e.target.value);
 
 colorBtn.onclick = () => setMode('color')
@@ -118,4 +147,5 @@ document.body.onmouseup = () => (mouseDown = false);
 window.onload = () => {
   colorPicker.value = "252525";
   createGrid(DEFAULT_SIZE);
+  activateButton(DEFAULT_MODE)
 }

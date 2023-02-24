@@ -105,12 +105,12 @@ main {
   background-color: #81B29A;
 }
 
-.active-btn {
+.active {
   background-color: #E07A5F;
   border: 1px solid #E07A5F;
 }
 
-.active-btn:hover {
+.active:hover {
   background-color: #E07A5F;
   border: 1px solid #E07A5F;
 }

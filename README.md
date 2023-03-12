@@ -1,6 +1,6 @@
-# ROCK PAPER SCISSORS
+# ETCH A SKETCH
 
-Rock Paper Scissors is a pixel art drawing tool.
+Etch-a-sketch is a pixel art drawing tool.
 
 You can choose between two mode:
 

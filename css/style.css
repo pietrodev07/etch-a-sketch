@@ -33,6 +33,23 @@ main {
   margin-bottom: 60px;
 }
 
+.size-label {
+  text-align: center;
+  font-size: 36px;
+  padding: 10px 40px;
+  border-radius: 8px;
+  background-color: #E07A5F;
+  border: 1px solid #E07A5F;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out;
+}
+
+.size-label:hover {
+  border: 1px solid #E07A5F;
+  scale: 1.05;
+  background-color: #E07A5F;
+}
+
 .display {
   width: 500px;
   height: 500px;

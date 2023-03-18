@@ -22,6 +22,8 @@ const clearBtn = document.querySelector('#clear-btn');
 
 const sizeBtn = document.querySelector('#size-btn');
 
+const sizeLabel = document.querySelector("#size-label")
+
 function setColor(newColor) {
   currentColor = newColor;
 }
@@ -42,6 +44,8 @@ function setSize() {
       currentSize = prompt("Enter size: 1 to 64");
     }
   }
+
+  sizeLabel.textContent = `${currentSize} x ${currentSize}`
 
   return currentSize;
 }

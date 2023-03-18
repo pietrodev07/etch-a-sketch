@@ -22,6 +22,8 @@ const clearBtn = document.querySelector('#clear-btn');
 
 const sizeBtn = document.querySelector('#size-btn');
 
+const resetSizeBtn = document.querySelector("#reset-size-btn");
+
 const sizeLabel = document.querySelector("#size-label")
 
 function setColor(newColor) {
@@ -107,6 +109,12 @@ function changeGridSize() {
   createGrid(setSize());
 }
 
+function resetSize() {
+  clearGrid();
+  createGrid(DEFAULT_SIZE);
+  sizeLabel.textContent = `${DEFAULT_SIZE} x ${DEFAULT_SIZE}`
+}
+
 function activateButton(newMode) {
 
   switch (currentMode) {
@@ -142,8 +150,8 @@ rainbowBtn.onclick = () => setMode('rainbow');
 eraserBtn.onclick = () => setMode('eraser');
 
 clearBtn.onclick = () => reloadGrid();
-
 sizeBtn.onclick = () => changeGridSize();
+resetSizeBtn.onclick = () => resetSize();
 
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);

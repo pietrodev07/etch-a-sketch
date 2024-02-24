@@ -26,6 +26,8 @@ const resetSizeBtn = document.querySelector("#reset-size-btn");
 
 const sizeLabel = document.querySelector("#size-label")
 
+const exportBtn = document.querySelector('#export-btn')
+
 function setColor(newColor) {
   currentColor = newColor;
 }
@@ -142,6 +144,20 @@ function activateButton(newMode) {
   }
 
 }
+function exportDisplay() {
+  html2canvas(display).then(function(canvas) {
+    const image = canvas.toDataURL('image/png');
+    const a = document.createElement('a');
+    const randomName = 'etch_' + Math.random().toString(36).substr(2, 5) + '.png';
+    
+    a.href = image;
+    a.download = randomName
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    console.clear()
+  });
+}
 
 colorPicker.oninput = (e) => setColor(e.target.value);
 
@@ -152,12 +168,13 @@ eraserBtn.onclick = () => setMode('eraser');
 clearBtn.onclick = () => reloadGrid();
 sizeBtn.onclick = () => changeGridSize();
 resetSizeBtn.onclick = () => resetSize();
+exportBtn.onclick= () => exportDisplay();
 
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
 window.onload = () => {
-  colorPicker.value = "252525";
+  colorPicker.value = "#252525";
   createGrid(DEFAULT_SIZE);
   activateButton(DEFAULT_MODE)
 }
